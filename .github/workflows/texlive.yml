@@ -1,0 +1,30 @@
+
+name: Compile document
+
+on:
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: xu-cheng/texlive-action/full@v1
+        name: Compile LaTeX document
+        with:
+          run: |
+            apk add make
+            make examples
+
+      - uses: actions/upload-artifact@v2
+        name: Fetch artifacts
+        with:
+          name: artifacts
+          path: ./examples/*.pdf
