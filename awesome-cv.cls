@@ -75,13 +75,18 @@
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \RequirePackage{fontawesome}
+
 \RequirePackage[default,opentype]{sourcesanspro}
+\RequirePackage[opentype]{sourceserifpro}
+\RequirePackage{sourcecodepro}
+
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
+
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
@@ -155,14 +160,6 @@
 \def\@sectioncolor#1#2#3{%
   \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
 }
-
-
-%-------------------------------------------------------------------------------
-%                Configuration for fonts
-%-------------------------------------------------------------------------------
-\RequirePackage[opentype]{sourceserifpro}
-\RequirePackage[default, opentype]{sourcesanspro}
-\RequirePackage{sourcecodepro}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
