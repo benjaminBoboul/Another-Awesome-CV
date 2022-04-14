@@ -76,10 +76,6 @@
 % (https://github.com/posquit0/latex-fontawesome)
 \RequirePackage{fontawesome}
 
-\RequirePackage[default,opentype]{sourcesanspro}
-\RequirePackage[opentype]{sourceserifpro}
-\RequirePackage{sourcecodepro}
-
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
